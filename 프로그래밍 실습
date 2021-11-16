@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang = "ko">
+     <head>
+         <title>웹 문서 만들기</title>
+         
+         
+         <style>
+            
+
+         </style>
+
+         <script>
+            
+        </script>
+     </head>
+     <body>
+        <button onclick="inntext()">innerText로 표시하기</button>
+        <button onclick="innhtml()">innerHTML로 표시하기</button>
+        <h1>현재시각: </h1>
+        <div id="current"></div>
+
+        <script>
+            let now = new Date();
+            const inntext = () => {
+                document.getElementById("current").innerText = now.toLocaleString();
+            }
+            const innhtml = () => {
+                document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+
+            }
+        </script>
+     </body>
+ </html>
