@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#DDC7A8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/Book_ing_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="읽고 있는 책"
+            android:textSize="24dp"
+            android:padding="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/Book_ing_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="현재 3권의 책을 읽고 있어요."
+            android:textSize="16dp"
+            android:layout_marginLeft="40dp"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="260dp"
+            android:src="@drawable/icon_right"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
