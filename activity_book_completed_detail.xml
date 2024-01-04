@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDC7A8"
+    tools:context=".Library.Book_completed_detail">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/Book_ing_detail_backbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_backbtn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/Completed_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Completed_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="책 제목"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/Completed_image"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="저자"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="36dp"/>
+                <TextView
+                    android:id="@+id/Completed_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_yellow"
+                    android:text="저자명"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="읽은 기간"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="26dp"/>
+                <TextView
+                    android:id="@+id/Completed_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:background="@drawable/background_yellow"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="6dp"/>
+                <TextView
+                    android:id="@+id/Completed_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~  날짜"
+                    android:background="@drawable/background_yellow"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 점수는요?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="26dp"/>
+        <RatingBar
+            android:id="@+id/Book_complete_ratingbar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:isIndicator="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 리뷰"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 리뷰"
+            android:background="@drawable/background_darkbrown_round"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/Completed_review"
+            android:textSize="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:clickable="true"
+                android:id="@+id/Save_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작성된 노트"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Completed_Note_recyclerview"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="30dp"/>
+        <!--            android:scrollbarFadeDuration="0"-->
+        <!--            android:scrollbarSize="5dp"-->
+        <!--            android:scrollbarThumbVertical="@color/colorPrimary"-->
+        <!--            android:scrollbars="vertical"-->
+        <!--            android:paddingHorizontal="30dp"/>-->
+
+
+    </LinearLayout>
+</ScrollView>

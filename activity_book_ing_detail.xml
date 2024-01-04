@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Library.Book_ing_detail"
+    android:background="#DDC7A8">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/Book_ing_detail_backbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_backbtn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/Book_ing_detail_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다 읽은 책 등록"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/Book_ing_Detail_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="삭제"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Book_ing_Detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="책 제목"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/Book_ing_Detail_image"
+                android:layout_width="100dp"
+                android:layout_height="125dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="저자"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="36dp"/>
+                <TextView
+                    android:id="@+id/Book_ing_detail_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_yellow"
+                    android:text="저자명"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="읽기 시작한 날짜"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="26dp"/>
+                <TextView
+                    android:id="@+id/Book_ing_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:background="@drawable/background_yellow"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="독서 시간 측정"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="26dp"/>
+        <TextView
+            android:id="@+id/StopWatch"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="00:00:00:00"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="200dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    app:layout_constraintStart_toStartOf="@id/a"
+                    app:layout_constraintTop_toTopOf="@id/a"
+                    android:id="@+id/TimeStart"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="시작"
+                    android:background="@drawable/background_yellow"
+                    />
+                <Button
+                    app:layout_constraintStart_toStartOf="@id/a"
+                    app:layout_constraintTop_toTopOf="@id/a"
+                    android:id="@+id/TimePause"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:text="일시정지"
+                    android:background="@drawable/background_yellow"
+                    android:visibility="invisible"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/TimeStop"
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="초기화"
+                android:background="@drawable/background_yellow"
+                />
+            <Button
+                android:id="@+id/TimeSave"
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="저장"
+                android:background="@drawable/background_yellow"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:clickable="true"
+                android:id="@+id/Save_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="노트 추가"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                />
+            <ImageView
+                android:id="@+id/Add_note"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_add"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Note_recyclerview"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="30dp"/>
+<!--            android:scrollbarFadeDuration="0"-->
+<!--            android:scrollbarSize="5dp"-->
+<!--            android:scrollbarThumbVertical="@color/colorPrimary"-->
+<!--            android:scrollbars="vertical"-->
+<!--            android:paddingHorizontal="30dp"/>-->
+
+
+    </LinearLayout>
+
+</ScrollView>

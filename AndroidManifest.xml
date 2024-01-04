@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.readingnote">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!-- <activity android:name=".MonthPicker" /> -->
+        <activity android:name=".Library.Complete_list" />
+        <activity android:name=".Library.Book_completed_detail" />
+        <activity android:name=".Library.Book_completed" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Library.EditNote" />
+
+        <activity android:name=".Library.Postnote" />
+        <activity android:name=".Library.Book_ing_detail" />
+
+        <activity android:name=".Loading" />
+        <activity android:name=".Library.Save_newbook" />
+        <activity android:name=".Library.Library_search_list" />
+        <activity android:name=".Library.Library_search_list_item" />
+        <activity android:name=".Library.Library_search" />
+        <activity android:name=".Reading.Statistics" />
+        <activity android:name=".Bottom_Navigation" />
+        <activity android:name=".Library.Library">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
